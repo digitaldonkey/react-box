@@ -1,0 +1,2 @@
+export const EVENT_LOG_APPEND = 'EVENT_LOG_APPEND';
+export const EVENT_LOG_CLEAR = 'EVENT_LOG_CLEAR';

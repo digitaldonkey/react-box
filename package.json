@@ -49,9 +49,18 @@
     "whatwg-fetch": "1.0.0"
   },
   "dependencies": {
+    "abi-decoder": "^1.1.0",
+    "axios": "^0.18.0",
     "dotenv": "^2.0.0",
+    "install": "^0.12.1",
+    "prop-types": "^15.6.2",
     "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react-dom": "^15.4.2",
+    "react-redux": "^5.0.7",
+    "redux": "^4.0.0",
+    "redux-logic": "^0.15.0",
+    "remove": "^0.1.5",
+    "rxjs": "^5.5.11"
   },
   "scripts": {
     "start": "node scripts/start.js",
