@@ -61,7 +61,7 @@ contract TestEventHandling {
      * Returns Unix Timestamp
      * E.g: https://www.unixtimestamp.com
      */
-    function unixTime() returns (uint256){
+    function unixTime() internal view returns (uint256){
         return now;
     }
 
