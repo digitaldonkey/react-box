@@ -9,9 +9,15 @@ This box comes with everything you need to start using smart contracts from a re
     npm install -g truffle
     ```
 
-2. Download the box. This also takes care of installing the necessary dependencies.
+~2. Download the box. This also takes care of installing the necessary dependencies.
     ```javascript
     truffle unbox react
+    ```~
+    
+2. Clone this repository (using this fork of react-box you do...)
+    ```bash
+    git clone https://github.com/digitaldonkey/react-box-event-handling.git
+    cd react-box-event-handling
     ```
 
 3. Run the development console.
