@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import {connect} from "react-redux";
-import TestEventHandling from '../build/contracts/TestEventHandling.json'
+import CallableEvents from '../build/contracts/CallableEvents.json'
 import getWeb3 from './utils/getWeb3'
 
 
@@ -169,16 +169,16 @@ class App extends Component {
  */
   instantiateContract() {
     const contract = require('truffle-contract');
-    const testEventHandling = contract(TestEventHandling);
-    testEventHandling.setProvider(this.state.web3.currentProvider);
+    const tallableEvents = contract(CallableEvents);
+    tallableEvents.setProvider(this.state.web3.currentProvider);
 
     // Set a default "from" to web3.eth.accounts[0] for any call.
-    testEventHandling.defaults({from: this.state.web3.eth.accounts[0]});
+    tallableEvents.defaults({from: this.state.web3.eth.accounts[0]});
 
     // Declaring this for later so we can chain functions on SimpleStorage.
     // Get accounts.
     this.state.web3.eth.getAccounts((error, accounts) => {
-      testEventHandling.deployed().then((instance) => {
+      tallableEvents.deployed().then((instance) => {
         console.log(instance, 'contract instance')
         this.setState({
           contract: instance,
@@ -193,7 +193,7 @@ class App extends Component {
       // Here we actually have the Event log.
       // The actual goal is listen for "mined events" by using
       console.log('Call to ' + method + '()');
-      console.log('result.logs contains all emitted events', result.logs);
+      console.log('result.logs contains all emitted events', JSON.stringify(result));
     })
   }
 
@@ -206,7 +206,7 @@ class App extends Component {
         <main className="container">
           <div className="pure-g">
             <div className="pure-u-1-1">
-              <h1>TestEventHandling.sol</h1>
+              <h1>CallableEvents.sol</h1>
               {this.state.contract &&
               <div>
                 <strong>Contract address</strong>

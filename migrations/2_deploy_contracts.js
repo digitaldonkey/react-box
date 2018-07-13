@@ -1,5 +1,5 @@
-const TestEventHandling = artifacts.require("./TestEventHandling.sol");
+const CallableEvents = artifacts.require("./CallableEvents.sol");
 
 module.exports = function(deployer) {
-  deployer.deploy(TestEventHandling);
+  deployer.deploy(CallableEvents);
 };

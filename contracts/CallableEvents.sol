@@ -1,6 +1,6 @@
 pragma solidity ^0.4.24;
 
-contract TestEventHandling {
+contract CallableEvents {
 
     address _owner;
 
